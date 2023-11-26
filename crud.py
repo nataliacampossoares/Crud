@@ -1,5 +1,5 @@
 import psycopg2
-from datetime import date
+from datetime import date 
 
 def get_conexao_postgres(banco_de_dados: str, usuario: str, senha: str, host: str = "localhost", porta: int = 5432):
     conn = psycopg2.connect(
@@ -50,7 +50,5 @@ def cria_tabela_contato():
     conexao.close()
 
 
-conexao = get_conexao_postgres("integracao_bd_py", "postgres", "postgres")
+conexao = get_conexao_postgres("banco_de_dados", "natalia", "natipedro14")
 cria_tabela_contato()
-
-
