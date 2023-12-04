@@ -13,7 +13,7 @@ def consultas():
     
     #consulta 2: contatos de uma cidade específica
     cursor.execute("SELECT nome FROM contato WHERE cidade='Rio de Janeiro'")
-    pessoas = cursor.fetchone()
+    pessoas = cursor.fetchall()
     for pessoa in pessoas:
         print(pessoa)
     print('\n')
